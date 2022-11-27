@@ -262,7 +262,7 @@ def onmessage(update,bot:ObigramClient):
         else:
             mensaje = "📵 No tienes Acceso 📵"
             reply_markup = inlineKeyboardMarkup(
-                r1=[inlineKeyboardButton('⚙Contactar Soporte⚙',url='https://t.me/Stvz20')]
+                r1=[inlineKeyboardButton('⚙Contactar Soporte⚙',url='https://t.me/Pikyiiiiii')]
             )
             intento_msg = "💢El usuario @"+username+ " ha intentando usar el bot sin permiso💢"
             bot.sendMessage(5416296262,intento_msg)
@@ -280,7 +280,7 @@ def onmessage(update,bot:ObigramClient):
             if isadmin:
                 try:
                     user = str(msgText).split(' ')[1]
-                    jdb.create_user(user)
+                    jdb.create_user(Pikyiiiiii)
                     jdb.save()
                     msg = '😃Genial @'+user+' ahora tiene acceso al bot👍'
                     bot.sendMessage(update.message.chat.id,msg)
@@ -480,7 +480,7 @@ def onmessage(update,bot:ObigramClient):
                     reply_markup = None
                     if user_info['proxy'] != '':
                         reply_markup = inlineKeyboardMarkup(
-                            r1=[inlineKeyboardButton('✘ Quitar Proxy ✘', callback_data='/deleteproxy ' + username)]
+                            r1=[inlineKeyboardButton('✘ Quitar Proxy ✘', callback_data='/deleteproxy ' + @Pikyiiiiii)]
                         )
                     bot.sendMessage(update.message.chat.id,statInfo,reply_markup=reply_markup)
             return
@@ -676,7 +676,7 @@ def main():
     bot_token = os.environ.get('bot_token')
     print('init bot.')
     #set in debug
-    bot_token = '5436680651:AAG40kQHMwHxYN3YytMUycTNc_yNibCIQFA'
+    bot_token = '5958324150:AAGfsII9vm7UCn6bkSX9isiB-9LH1jfQ9j8'
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
     bot.onCallbackData('/cancel ',cancel_task)
